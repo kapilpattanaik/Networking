@@ -1,0 +1,41 @@
+CLI Commands
+
+	show run : Use /"Keyword" eg: /face (Similar to Begin)
+	show run : Use /"Keyword" eg: +face (Similar to Include)
+
+	show run | redirect flash:test.cfg
+	more flash:test.cfg
+
+	sh run linenum
+	sh run brief
+
+	sh run | include ^I --- Shows all lines starting with I
+	sh run | include 2$ --- Shows all lines ending with 2
+
+	sh run | include 87|255 --- Shows all lines that includes 87 or 255
+
+	reload at <Time >
+	show processes cpu history
+
+	show interfaces trunk
+
+	show control plane host open-ports ---- shows open ports
+
+	configure replace flash0:/run1.cfg --- replaces Running config with files in Flash
+
+	### Rollback Configs
+	conf t
+	rollback archive flash0:backup.cfg --- Set Archiving path
+	end
+	conf t revert time 10 --- Rollback configs in 10 mins
+	configure confirm --- to Keep the configuration as is without the rollback
+
+	show cdp entry * protocl --- Shows the IP address of CDP neighbor
+	show platform port-asic stats drop --- shows the drops on ASIC level
+	show platform tcam utilization asic all --- shows TCAM utilization ,helps QOS configuration
+
+	show sdm prefer -- shows preferred SDM
+	
+
+
+
